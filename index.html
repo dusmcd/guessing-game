@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <title>Guessing Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+          crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
 
@@ -18,7 +22,7 @@
           <div id='input-parent'>
             <!-- Player's guess input, and submit button -->
             <input id="player-input" type="text" placeholder="#" autofocus>
-            <button id="submit">Go</button>
+            <button id="submit" class="btn btn-dark">Go</button>
           </div>
 
           <div id='guesses'>
@@ -28,13 +32,14 @@
                 <li class="guess">-</li>
                 <li class="guess">-</li>
                 <li class="guess">-</li>
+                <li class="guess">-</li>
             </ul>
           </div>
 
           <div id="menu-btns">
             <!-- reset and hint buttons -->
-            <button id="reset">Reset</button>
-            <button id="guess">Guess</button>
+            <button id="reset" class="btn btn-dark">Reset</button>
+            <button id="guess" class="btn btn-dark">Guess</button>
           </div>
         </div>
       </div>
@@ -42,16 +47,16 @@
 
 
     <div id='footer'>
-        <div>
-          <div class='center'>
+        <div class="row">
+          <div class='col-md-4 center'>
             <img src='fa-logo@2x.png'></img>
           </div>
 
-          <div class='center'>
+          <div class='col-md-4 center'>
             <h4>Project by Dustin McDowell</h4>
           </div>
 
-          <div class='center'>
+          <div class='col-md-4 center'>
             <img src='grace_hopper_academy.png'></img>
           </div>
 
