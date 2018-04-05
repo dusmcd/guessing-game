@@ -20,14 +20,6 @@ body {
     text-align: center;
   }
 
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-
   ul {
       list-style: none;
       padding: 0;
@@ -64,10 +56,4 @@ body {
       background-color: white;
       position: fixed;
       bottom: 0;
-  }
-
-  .bottom-row {
-      display: inline-block;
-      width: 30%;
-      margin: 0 1.66%;
   }
