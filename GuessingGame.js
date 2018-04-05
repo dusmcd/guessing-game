@@ -16,6 +16,11 @@ $(document).ready(function() {
         
         inputBox.val('');
         title.text(result + ' ' + titleHint);
+        if (result !== 'You have already guessed that number.') {
+            $('#guess-list li:nth-child(' + newGame.pastGuesses.length + ')')
+            .text(playerGuess);
+        }
+        
 
         if (result === 'You Lose.' || result === 'You Win!')  {
             title.text(result);
@@ -40,11 +45,16 @@ $(document).ready(function() {
         title.text('Play the Guessing Game!');
         submit.prop('disabled', false);
         hint.prop('disabled', false);
+        resetGuesses();
         newGame = new Game();
-    })
+    });
 });
 
-
+function resetGuesses() {
+    $('#guess-list').html('<li class="guess">-</li><li class="guess">-</li>' +
+                          '<li class="guess">-</li><li class="guess">-</li>' +
+                          '<li class="guess">-</li>')
+}
 
 
 function generateWinningNumber() {
@@ -104,7 +114,6 @@ Game.prototype.checkGuess = function() {
         result = 'You Win!';
     }
     else if (this.pastGuesses.includes(this.playersGuess)) {
-        this.pastGuesses.push(this.playersGuess);
         result = 'You have already guessed that number.';
     }
     else if (this.pastGuesses.length >= 4) {
