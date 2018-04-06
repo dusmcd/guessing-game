@@ -38,7 +38,7 @@ $(document).ready(function() {
         }
     });
     hint.on('click', function() {
-        title.text(newGame.provideHint());
+        title.text('The winning number is one of these: ' + newGame.provideHint());
     });
     $('#reset').on('click', function() {
         subtitle.text('Enter a number between 1-100');
